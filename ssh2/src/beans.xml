@@ -36,8 +36,8 @@
 		    <value>
 		        hibernate.dialect=org.hibernate.dialect.MySQL5Dialect
 		        hibernate.hbm2ddl.auto=update
-		        hibernate.show_sql=false
-		        hibernate.format_sql=false
+		        hibernate.show_sql=true
+		        hibernate.format_sql=true
 		        hibernate.cache.use_second_level_cache=true
        	        hibernate.cache.use_query_cache=false
         	    hibernate.cache.provider_class=org.hibernate.cache.EhCacheProvider
@@ -48,6 +48,6 @@
 	  	<property name="sessionFactory" ref="sessionFactory"/>
 	</bean>
 	<tx:annotation-driven transaction-manager="txManager"/>
-	<bean id="personService" class="cn.itcast.service.impl.PersonServiceBean"/>
-	<bean id="personList" class="cn.itcast.web.PersonAction"/>
+	<bean id="personService" class="cn.north.service.impl.PersonServiceBean"/>
+	<bean id="personList" class="cn.north.web.PersonAction"/>
 </beans>
